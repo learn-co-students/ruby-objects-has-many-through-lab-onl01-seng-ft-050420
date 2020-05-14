@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song #Through class
   attr_accessor :name, :artist, :genre
   @@all = []

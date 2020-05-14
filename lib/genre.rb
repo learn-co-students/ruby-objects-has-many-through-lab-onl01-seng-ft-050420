@@ -3,7 +3,7 @@ class Genre
   @@all = []
   
   def initialize()
-    
+    @@all << self
   end
   
   def self.all
@@ -14,8 +14,9 @@ class Genre
     Songs.all.select {|song| song.genre == self}
   end
   
+  #How one class talks to another
   def artists
-    songs.all.map {|song| song.artist}
+    songs.map {|song| song.artist}
   end
   
 end 

@@ -1,4 +1,4 @@
-class Song 
+class Song #Through class
   attr_accessor :name, :artist, :genre
   @@all = []
   
@@ -6,6 +6,7 @@ class Song
     @name = name
     @artist = artist
     @genre = genre
+    
     @@all << self
   end
   

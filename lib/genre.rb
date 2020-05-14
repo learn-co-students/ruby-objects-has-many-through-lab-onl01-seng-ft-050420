@@ -1,10 +1,12 @@
 require 'pry'
 
 class Genre
-  attr_accessor
+  attr_accessor :name, :genre 
+  attr_reader :song
   @@all = []
   
-  def initialize()
+  def initialize(name)
+    @name = name
     @@all << self
   end
   
@@ -13,7 +15,7 @@ class Genre
   end
   
   def songs 
-    Songs.all.select {|song| song.genre == self}
+    Song.all.select {|song| song.genre == self}
   end
   
   #How one class talks to another
